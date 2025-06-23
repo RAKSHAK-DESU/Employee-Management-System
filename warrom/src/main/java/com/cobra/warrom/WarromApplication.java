@@ -15,6 +15,11 @@ public class WarromApplication {
 		p.setPname("Book");
 
 		System.out.println(p);
+
+		Order o=ioc.getBean(Order.class);
+		o.setOid(1);
+		o.setOname("order 1");
+		System.out.println(o);
 	}
 
 }
