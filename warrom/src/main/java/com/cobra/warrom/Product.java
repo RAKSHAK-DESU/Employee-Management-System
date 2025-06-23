@@ -1,5 +1,8 @@
 package com.cobra.warrom;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Product {
     private int pid;
     private String pname;
@@ -18,5 +21,13 @@ public class Product {
 
     public void setPname(String pname) {
         this.pname = pname;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "pid=" + pid +
+                ", pname='" + pname + '\'' +
+                '}';
     }
 }
