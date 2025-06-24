@@ -19,7 +19,10 @@ public class WarromApplication {
 		Order o=ioc.getBean(Order.class);
 		o.setOid(1);
 		o.setOname("order 1");
-		System.out.println(o);
+		System.out.println(o );
+
+		Product m= new Product();
+		System.out.println(m.hashCode());  // Hashcode
 	}
 
 }
