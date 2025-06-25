@@ -12,6 +12,7 @@ public class SkyTorqueApplication {
 
 		Discount d = new DiscountImpl();
 
+		Discount d1 = new PrimeDiscount();
 
 		Product p = ioc.getBean(Product.class);
 		p.setPid(123);

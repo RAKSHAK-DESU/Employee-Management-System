@@ -1,6 +1,7 @@
 package com.cobra.SkyTorque;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -10,6 +11,7 @@ public class Order {
 
     private Product prod;
 
+    @Qualifier("primeDisc")
     @Autowired
     private Discount discount;
 
