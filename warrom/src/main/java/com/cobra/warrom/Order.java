@@ -1,5 +1,6 @@
 package com.cobra.warrom;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -9,8 +10,15 @@ public class Order {
 
     private Product prod;
 
+
+    public Order(Product prod){
+        this.prod=prod;
+    }
     public int getOid() {
         return oid;
+    }
+    public void setOid(int oid) {
+        this.oid = oid;
     }
 
     public String getStatus() {
@@ -38,8 +46,6 @@ public class Order {
                 '}';
     }
 
-    public void setOid(int oid) {
-        this.oid = oid;
-    }
+
 
 }

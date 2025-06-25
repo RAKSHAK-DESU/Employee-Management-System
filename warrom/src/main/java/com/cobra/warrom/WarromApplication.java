@@ -17,7 +17,7 @@ public class WarromApplication {
 		Order ord= ioc.getBean(Order.class);
 		ord.setOid(123);
 		ord.setStatus("Delivered");
-		ord.setProd(pr);  //Order Required a product so the product pr is assigned
+		//ord.setProd(pr); //Manual Injection //Order Required a product so the product pr is assigned
 
 		System.out.println(ord);
 	}
