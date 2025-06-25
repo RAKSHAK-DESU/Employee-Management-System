@@ -20,6 +20,10 @@ public class WarromApplication {
 		//ord.setProd(pr); //Manual Injection //Order Required a product so the product pr is assigned
 
 		System.out.println(ord);
+
+		Discount d = new DiscountImpl();
+		d.getDiscount();
+	
 	}
 
 }
