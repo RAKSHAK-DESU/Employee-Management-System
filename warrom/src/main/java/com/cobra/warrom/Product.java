@@ -1,7 +1,8 @@
 package com.cobra.warrom;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
-
+@Scope("prototype")
 @Component
 public class Product {
     private int pid;

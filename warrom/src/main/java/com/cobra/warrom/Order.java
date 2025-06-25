@@ -5,29 +5,41 @@ import org.springframework.stereotype.Component;
 @Component
 public class Order {
     private int oid;
-    private String oname;
+    private String status;
+
+    private Product prod;
 
     public int getOid() {
         return oid;
     }
 
-    public String getOname() {
-        return oname;
+    public String getStatus() {
+        return status;
     }
 
-    public void setOname(String oname) {
-        this.oname = oname;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    public void setOid(int oid) {
-        this.oid = oid;
+    public Product getProd() {
+        return prod;
+    }
+
+    public void setProd(Product prod) {
+        this.prod = prod;
     }
 
     @Override
     public String toString() {
         return "Order{" +
                 "oid=" + oid +
-                ", oname='" + oname + '\'' +
+                ", status='" + status + '\'' +
+                ", prod=" + prod +
                 '}';
     }
+
+    public void setOid(int oid) {
+        this.oid = oid;
+    }
+
 }

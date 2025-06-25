@@ -10,19 +10,16 @@ public class WarromApplication {
 	public static void main(String[] args) {
 		ApplicationContext ioc=  SpringApplication.run(WarromApplication.class, args);
 
-		Product p= ioc.getBean(Product.class);
-		p.setPid(1);
-		p.setPname("Book");
+		Product pr= ioc.getBean(Product.class);
+		pr.setPid(123);
+		pr.setPname("Book");
 
-		System.out.println(p);
+		Order ord= ioc.getBean(Order.class);
+		ord.setOid(123);
+		ord.setStatus("Delivered");
+		ord.setProd(pr);  //Order Required a product so the product pr is assigned
 
-		Order o=ioc.getBean(Order.class);
-		o.setOid(1);
-		o.setOname("order 1");
-		System.out.println(o );
-
-		Product m= new Product();
-		System.out.println(m.hashCode());  // Hashcode
+		System.out.println(ord);
 	}
 
 }
