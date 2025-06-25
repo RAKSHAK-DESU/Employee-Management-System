@@ -1,4 +1,4 @@
-package com.cobra.warrom;
+package com.cobra.SkyTorque;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -10,6 +10,26 @@ public class Order {
 
     private Product prod;
 
+    @Autowired
+    private Discount discount;
+
+    public Discount getDiscount() {
+        return discount;
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "oid=" + oid +
+                ", status='" + status + '\'' +
+                ", prod=" + prod +
+                ", discount=" + discount +
+                '}';
+    }
+
+    public void setDiscount(Discount discount) {
+        this.discount = discount;
+    }
 
     public Order(Product prod){
         this.prod=prod;
@@ -36,16 +56,6 @@ public class Order {
     public void setProd(Product prod) {
         this.prod = prod;
     }
-
-    @Override
-    public String toString() {
-        return "Order{" +
-                "oid=" + oid +
-                ", status='" + status + '\'' +
-                ", prod=" + prod +
-                '}';
-    }
-
 
 
 }

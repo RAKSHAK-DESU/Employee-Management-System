@@ -1,10 +1,10 @@
-package com.cobra.warrom;
+package com.cobra.SkyTorque;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class WarromApplicationTests {
+class SkyTorqueApplicationTests {
 
 	@Test
 	void contextLoads() {
