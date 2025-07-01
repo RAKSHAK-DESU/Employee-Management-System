@@ -9,7 +9,7 @@ public class SkyTorqueApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext ioc=  SpringApplication.run(SkyTorqueApplication.class, args);
-
+ 
 	}
 
 }
